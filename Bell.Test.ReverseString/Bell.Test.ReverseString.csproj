@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <Optimize>False</Optimize>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Bell.Test.Infrastructure.Database\Bell.Test.Infrastructure.Database.csproj" />
+    <ProjectReference Include="..\Bell.Test.Infrastructure.Repositories\Bell.Test.Infrastructure.Repositories.csproj" />
+    <ProjectReference Include="..\Bell.Test.ReverseString.Domain\Bell.Test.ReverseString.Domain.csproj" />
+    <ProjectReference Include="..\Bell.Test.Services\Bell.Test.ReverseStringServices.csproj" />
+  </ItemGroup>
+
+</Project>
